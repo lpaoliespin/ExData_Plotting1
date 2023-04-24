@@ -32,5 +32,7 @@ names(hpc)[names(hpc) == "Time"] <- "DateTime"
 ## Removing Date column
 hpc <- hpc[ ,!(names(hpc) %in% c("Date"))]
 
+# Formatting DateTime Column
+hpc$DateTime <- as.POSIXct(hpc$DateTime)
 
 
